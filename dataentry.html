@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Jordans and Converse Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            font-size: 10px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 500px;
+        }
+
+        h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+        }
+
+        .form-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 0.9em;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 1em;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="airJordansForm">
+        <h3>Air Jordans</h3>
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" required>
+        </div>
+
+        <div class="form-group">
+            <label for="brand">Brand</label>
+            <input type="text" name="brand" id="brand" required>
+        </div>
+
+        <div class="form-group">
+            <label for="image1">Image 1</label>
+            <input type="text" name="image1" id="image1" required>
+        </div>
+
+        <div class="form-group">
+            <label for="image2">Image 2</label>
+            <input type="text" name="image2" id="image2" required>
+        </div>
+
+        <div class="form-group">
+            <label for="image3">Image 3</label>
+            <input type="text" name="image3" id="image3" required>
+        </div>
+
+        <div class="form-group">
+            <label for="imageBrand">Image Brand</label>
+            <input type="text" name="imageBrand" id="imageBrand" required>
+        </div>
+
+        <div class="form-group">
+            <label for="priceBottom">Price Bottom</label>
+            <input type="number" name="priceBottom" id="priceBottom" required>
+        </div>
+
+        <div class="form-group">
+            <label for="priceTop">Price Top</label>
+            <input type="number" name="priceTop" id="priceTop" required>
+        </div>
+
+        <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="number" name="quantity" id="quantity" required>
+        </div>
+
+        <div class="form-group">
+            <label for="sizeRange">Size Range</label>
+            <input type="text" name="sizeRange" id="sizeRange" required>
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <form id="converseForm">
+        <h3>Converse</h3>
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" required>
+        </div>
+
+        <div class="form-group">
+            <label for="brand">Brand</label>
+            <input type="text" name="brand" id="brand" required>
+        </div>
+
+        <div class="form-group">
+            <label for="image1">Image 1</label>
+            <input type="text" name="image1" id="image1" required>
+        </div>
+
+        <div class="form-group">
+            <label for="image2">Image 2</label>
+            <input type="text" name="image2" id="image2" required>
+        </div>
+
+        <div class="form-group">
+            <label for="image3">Image 3</label>
+            <input type="text" name="image3" id="image3" required>
+        </div>
+
+        <div class="form-group">
+            <label for="imageBrand">Image Brand</label>
+            <input type="text" name="imageBrand" id="imageBrand" required>
+        </div>
+
+        <div class="form-group">
+            <label for="priceBottom">Price Bottom</label>
+            <input type="number" name="priceBottom" id="priceBottom" required>
+        </div>
+
+        <div class="form-group">
+            <label for="priceTop">Price Top</label>
+            <input type="number" name="priceTop" id="priceTop" required>
+        </div>
+
+        <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="number" name="quantity" id="quantity" required>
+        </div>
+
+        <div class="form-group">
+            <label for="sizeRange">Size Range</label>
+            <input type="text" name="sizeRange" id="sizeRange" required>
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyAYjhxzN5HcaSXcFUyGQZRH_nP-NObZSHk",
+            authDomain: "kicksco-94053.firebaseapp.com",
+            projectId: "kicksco-94053",
+            storageBucket: "kicksco-94053.appspot.com",
+            messagingSenderId: "258937231502",
+            appId: "1:258937231502:web:3b668229bfe91670f411df",
+            measurementId: "G-Z5F5MZF7PH"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // Function to handle form submission
+        async function handleFormSubmit(event, collectionName) {
+            event.preventDefault();
+            const form = event.target;
+            const docId = form.title.value;
+            const docData = {
+                Brand: form.brand.value,
+                Image1: form.image1.value,
+                Image2: form.image2.value,
+                Image3: form.image3.value,
+                ImageBrand: form.imageBrand.value,
+                PriceBottom: parseFloat(form.priceBottom.value),
+                PriceTop: parseFloat(form.priceTop.value),
+                Quantity: parseInt(form.quantity.value, 10),
+                SizeRange: form.sizeRange.value
+            };
+            try {
+                await setDoc(doc(db, collectionName, docId), docData);
+                alert(`${collectionName} document written with ID: ${docId}`);
+                form.reset();
+            } catch (error) {
+                console.error("Error adding document: ", error);
+                alert("Error adding document: " + error.message);
+            }
+        }
+
+        // Add event listeners to both forms
+        document.getElementById('airJordansForm').addEventListener('submit', (event) => handleFormSubmit(event, "Air Jordans"));
+        document.getElementById('converseForm').addEventListener('submit', (event) => handleFormSubmit(event, "Converse"));
+    </script>
+</body>
+
+</html>

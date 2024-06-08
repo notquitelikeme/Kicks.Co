@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Ensures padding and border are included in the element's total width and height */
+    font-family: "Raleway", sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+    /* Prevents horizontal scrolling */
+}
+
+.top-header {
+    display: block;
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.header-container {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.top-bar {
+    height: 10px;
+    background: linear-gradient(60deg, darkgreen, darkblue);
+    z-index: 1000;
+    width: 100%;
+}
+
+header {
+    padding: 0px 7%;
+    padding-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+header h5 {
+    background: linear-gradient(60deg, darkgreen, darkblue);
+    color: white;
+    padding: 2px;
+    padding-right: 25px;
+}
+
+.image-container {
+    position: relative;
+    /* Create a positioning context for the badge */
+    display: inline-block;
+}
+
+.image-container img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin-left: 20px;
+    margin-right: -15px;
+}
+
+.badge {
+    position: absolute;
+    top: -2px;
+    /* Position the badge */
+    right: -25px;
+    /* Adjust as necessary */
+    background-color: linear-gradient(60deg, darkgreen, darkblue);
+    /* Background color for the badge */
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+header .logo {
+    font-weight: bolder;
+    font-size: 25px;
+    color: black;
+}
+
+header .navbar ul {
+    list-style: none;
+    display: flex;
+    /* Ensure the main navigation items are displayed horizontally */
+}
+
+header .navbar ul li {
+    position: relative;
+}
+
+header .navbar ul li a {
+    font-size: 15px;
+    padding: 10px 20px;
+    /* Simplified padding for better control */
+    color: black;
+    display: block;
+}
+
+header .navbar ul li a:hover {
+    background: linear-gradient(60deg, darkgreen, darkblue);
+    color: #fff;
+    transition: background 1s, color 1s;
+}
+
+header .navbar ul li ul {
+    position: absolute;
+    top: 100%;
+    left: -35%;
+    background: white;
+    display: flex;
+    flex-direction: row;
+    /* Display sub-navigation items horizontally */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    /* Remove padding to prevent affecting layout */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s, visibility 1s;
+}
+
+header .navbar ul li ul li {
+    float: none;
+    /* Ensure sub-nav items are displayed inline */
+    width: auto;
+    /* Set width to auto to avoid affecting layout */
+}
+
+header .navbar ul li ul li a {
+    white-space: nowrap;
+    /* Prevent text wrapping */
+    padding: 10px 20px;
+    color: black;
+    font-size: 10px;
+}
+
+header .navbar ul li:hover>ul {
+    opacity: 1;
+    visibility: visible;
+}
+
+header .navbar ul li:hover>a {
+    background: linear-gradient(60deg, darkgreen, rgb(0, 0, 96));
+    color: #fff;
+}
+
+footer {
+    background: linear-gradient(60deg, darkgreen, rgb(0, 0, 68));
+    color: white;
+    font-size: 10px;
+    padding: 10px 0 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.f-container {
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.f-col-3-4-container {
+    flex: 0 0 30%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 2px;
+    padding: 5px;
+}
+
+.f-row {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2px;
+}
+
+footer p {
+    color: white;
+}
+
+footer h3 {
+    color: white;
+}
+
+.f-col-2 {
+    flex: 0 0 30%;
+    margin-bottom: 2px;
+    padding: 5px;
+    text-align: left;
+}
+
+.f-col-1 {
+    flex: 0 0 30%;
+    text-align: left;
+    margin-bottom: 2px;
+    padding: 5px;
+}
+
+.f-col-1 img {
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+.f-col-3,
+.f-col-4 {
+    flex: 0 0 40%;
+    text-align: left;
+    margin-bottom: 2px;
+    padding: 5px;
+}
+
+.f-ul-1 {
+    list-style-type: none;
+    columns: 2;
+}
+
+.f-ul-2 {
+    list-style-type: none;
+    font-size: 50px;
+    columns: 4;
+    column-gap: 2px;
+}
+
+footer .logo {
+    font-weight: bolder;
+    font-size: 80px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.app-logo {
+    margin-top: 20px;
+}
+
+.app-logo img {
+    width: 140px;
+}
+
+footer hr {
+    border: none;
+    background: white;
+    height: 1px;
+    margin: 10px 0;
+}
+
+.copyright {
+    text-align: center;
+}
+
+/* Catalogue page */
+.main {
+    text-align: left;
+    margin-top: 30px;
+}
+
+.ad {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.gradient-text {
+    text-align: center;
+    background: linear-gradient(60deg, darkgreen, rgb(0, 0, 96));
+    -webkit-background-clip: text;
+    /* For Safari and Chrome */
+    -moz-background-clip: text;
+    /* For Firefox */
+    background-clip: text;
+    /* Standard property */
+    -webkit-text-fill-color: transparent;
+    /* For Safari and Chrome */
+    -moz-text-fill-color: transparent;
+    /* For Firefox */
+    text-emphasis-color: transparent;
+    /* Standard property */
+}
+.catalogue-title{
+    font-weight: bold;
+    margin: 10px;
+    padding: 20px;
+}
+.container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.card {
+    flex-basis: 18%;
+    height: 100%;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: left;
+    margin: 10px;
+    margin-top: 20px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.product-img {
+    height: 180px;
+    width: 180px;
+    object-fit: cover;
+    align-items: center;
+}
+
+.card-title,
+.card-brand,
+.card-size,
+.card-price,
+.card-qty {
+    padding: 5px;
+    text-align: left;
+}
+
+.card-title {
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.card-brand,
+.card-size,
+.card-price,
+.card-qty {
+    font-size: 10px;
+    color: #555;
+}
+
+.card-brand {
+    margin-top: auto;
+    /* Push brand, size, price, and qty to the bottom */
+}
+.brand-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+}
