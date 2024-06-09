@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Air Jordans and Converse Form</title>
+    <title>Data Entry Form</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -187,6 +187,61 @@
         <input type="submit" value="Submit">
     </form>
 
+    <form id="airForceForm">
+        <h3>Air Force</h3>
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" required>
+        </div>
+
+        <div class="form-group">
+            <label for="brand">Brand</label>
+            <input type="text" name="brand" id="brand" required>
+        </div>
+
+        <div class="form-group">
+            <label for="image1">Image 1</label>
+            <input type="text" name="image1" id="image1" required>
+        </div>
+
+        <div class="form-group">
+            <label for="image2">Image 2</label>
+            <input type="text" name="image2" id="image2" required>
+        </div>
+
+        <div class="form-group">
+            <label for="image3">Image 3</label>
+            <input type="text" name="image3" id="image3" required>
+        </div>
+
+        <div class="form-group">
+            <label for="imageBrand">Image Brand</label>
+            <input type="text" name="imageBrand" id="imageBrand" required>
+        </div>
+
+        <div class="form-group">
+            <label for="priceBottom">Price Bottom</label>
+            <input type="number" name="priceBottom" id="priceBottom" required>
+        </div>
+
+        <div class="form-group">
+            <label for="priceTop">Price Top</label>
+            <input type="number" name="priceTop" id="priceTop" required>
+        </div>
+
+        <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="number" name="quantity" id="quantity" required>
+        </div>
+
+        <div class="form-group">
+            <label for="sizeRange">Size Range</label>
+            <input type="text" name="sizeRange" id="sizeRange" required>
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
         import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
@@ -233,6 +288,7 @@
         // Add event listeners to both forms
         document.getElementById('airJordansForm').addEventListener('submit', (event) => handleFormSubmit(event, "Air Jordans"));
         document.getElementById('converseForm').addEventListener('submit', (event) => handleFormSubmit(event, "Converse"));
+        document.getElementById('airForceForm').addEventListener('submit', (event) => handleFormSubmit(event, "Air Force"));
     </script>
 </body>
 
