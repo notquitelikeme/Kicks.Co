@@ -19,7 +19,7 @@
             font-size: 10px;
         }
 
-        form {
+        .form-container {
             background-color: #fff;
             padding: 20px;
             margin: 10px;
@@ -73,174 +73,207 @@
         input[type="submit"]:hover {
             background-color: #0056b3;
         }
+
+        .form-container form {
+            display: none;
+        }
     </style>
 </head>
 
 <body>
-    <form id="airJordansForm">
-        <h3>Air Jordans</h3>
-        <div class="form-group">
-            <label for="title">Title</label>
-            <input type="text" name="title" id="title" required>
-        </div>
+    <div class="form-container">
+        <label for="languageSelector">Select Language:</label>
+        <select id="languageSelector">
+            <option value="en">English</option>
+            <option value="sw">Swahili</option>
+            <option value="de">German</option>
+            <option value="es">Spanish</option>
+            <option value="it">Italian</option>
+        </select>
 
-        <div class="form-group">
-            <label for="brand">Brand</label>
-            <input type="text" name="brand" id="brand" required>
-        </div>
+        <label for="formSelector">Select Form:</label>
+        <select id="formSelector">
+            <option value="">--Select--</option>
+            <option value="airJordansForm">Air Jordans</option>
+            <option value="converseForm">Converse</option>
+            <option value="airForceForm">Air Force</option>
+        </select>
 
-        <div class="form-group">
-            <label for="image1">Image 1</label>
-            <input type="text" name="image1" id="image1" required>
-        </div>
+        <form id="airJordansForm">
+            <h3 data-translate="title">Air Jordans</h3>
+            <div class="form-group">
+                <label for="title" data-translate="title">Title</label>
+                <input type="text" name="title" id="title" value="Air Jordans" readonly>
+            </div>
+            <div class="form-group">
+                <label for="brand" data-translate="brand">Brand</label>
+                <input type="text" name="brand" id="brand" required>
+            </div>
+            <div class="form-group">
+                <label for="image1" data-translate="image1">Image 1</label>
+                <input type="text" name="image1" id="image1" required>
+            </div>
+            <div class="form-group">
+                <label for="image2" data-translate="image2">Image 2</label>
+                <input type="text" name="image2" id="image2" required>
+            </div>
+            <div class="form-group">
+                <label for="image3" data-translate="image3">Image 3</label>
+                <input type="text" name="image3" id="image3" required>
+            </div>
+            <div class="form-group">
+                <label for="imageBrand" data-translate="imageBrand">Image Brand</label>
+                <input type="text" name="imageBrand" id="imageBrand" value="https://kickskenya.com/cdn/shop/collections/Jumpman-971981.png?pad_color=fff&v=1680083391&width=350" readonly>
+            </div>
+            <div class="form-group">
+                <label for="priceBottom" data-translate="priceBottom">Price Bottom</label>
+                <input type="number" name="priceBottom" id="priceBottom" required>
+            </div>
+            <div class="form-group">
+                <label for="priceTop" data-translate="priceTop">Price Top</label>
+                <input type="number" name="priceTop" id="priceTop" required>
+            </div>
+            <div class="form-group">
+                <label for="quantity" data-translate="quantity">Quantity</label>
+                <input type="number" name="quantity" id="quantity" required>
+            </div>
+            <div class="form-group">
+                <label for="sizeRange" data-translate="sizeRange">Size Range</label>
+                <input type="text" name="sizeRange" id="sizeRange" required>
+            </div>
+            <input type="submit" value="Submit" data-translate="submit">
+        </form>
 
-        <div class="form-group">
-            <label for="image2">Image 2</label>
-            <input type="text" name="image2" id="image2" required>
-        </div>
+        <form id="converseForm">
+            <h3 data-translate="title">Converse</h3>
+            <div class="form-group">
+                <label for="title" data-translate="title">Title</label>
+                <input type="text" name="title" id="title" value="Converse" readonly>
+            </div>
+            <div class="form-group">
+                <label for="brand" data-translate="brand">Brand</label>
+                <input type="text" name="brand" id="brand" required>
+            </div>
+            <div class="form-group">
+                <label for="image1" data-translate="image1">Image 1</label>
+                <input type="text" name="image1" id="image1" required>
+            </div>
+            <div class="form-group">
+                <label for="image2" data-translate="image2">Image 2</label>
+                <input type="text" name="image2" id="image2" required>
+            </div>
+            <div class="form-group">
+                <label for="image3" data-translate="image3">Image 3</label>
+                <input type="text" name="image3" id="image3" required>
+            </div>
+            <div class="form-group">
+                <label for="imageBrand" data-translate="imageBrand">Image Brand</label>
+                <input type="text" name="imageBrand" id="imageBrand" value="https://kickskenya.com/cdn/shop/collections/CONVERSE_LOGO.jpg?pad_color=fff&v=1679739857&width=350" readonly>
+            </div>
+            <div class="form-group">
+                <label for="priceBottom" data-translate="priceBottom">Price Bottom</label>
+                <input type="number" name="priceBottom" id="priceBottom" required>
+            </div>
+            <div class="form-group">
+                <label for="priceTop" data-translate="priceTop">Price Top</label>
+                <input type="number" name="priceTop" id="priceTop" required>
+            </div>
+            <div class="form-group">
+                <label for="quantity" data-translate="quantity">Quantity</label>
+                <input type="number" name="quantity" id="quantity" required>
+            </div>
+            <div class="form-group">
+                <label for="sizeRange" data-translate="sizeRange">Size Range</label>
+                <input type="text" name="sizeRange" id="sizeRange" required>
+            </div>
+            <input type="submit" value="Submit" data-translate="submit">
+        </form>
 
-        <div class="form-group">
-            <label for="image3">Image 3</label>
-            <input type="text" name="image3" id="image3" required>
-        </div>
+        <form id="airForceForm">
+            <h3 data-translate="title">Air Force</h3>
+            <div class="form-group">
+                <label for="title" data-translate="title">Title</label>
+                <input type="text" name="title" id="title" value="Air Force" readonly>
+            </div>
+            <div class="form-group">
+                <label for="brand" data-translate="brand">Brand</label>
+                <input type="text" name="brand" id="brand" required>
+            </div>
+            <div class="form-group">
+                <label for="image1" data-translate="image1">Image 1</label>
+                <input type="text" name="image1" id="image1" required>
+            </div>
+            <div class="form-group">
+                <label for="image2" data-translate="image2">Image 2</label>
+                <input type="text" name="image2" id="image2" required>
+            </div>
+            <div class="form-group">
+                <label for="image3" data-translate="image3">Image 3</label>
+                <input type="text" name="image3" id="image3" required>
+            </div>
+            <div class="form-group">
+                <label for="imageBrand" data-translate="imageBrand">Image Brand</label>
+                <input type="text" name="imageBrand" id="imageBrand" value="https://th.bing.com/th/id/OIP.0igMV3ugPBWv4lvgVFecJQAAAA?rs=1&pid=ImgDetMain" readonly>
+            </div>
+            <div class="form-group">
+                <label for="priceBottom" data-translate="priceBottom">Price Bottom</label>
+                <input type="number" name="priceBottom" id="priceBottom" required>
+            </div>
+            <div class="form-group">
+                <label for="priceTop" data-translate="priceTop">Price Top</label>
+                <input type="number" name="priceTop" id="priceTop" required>
+            </div>
+            <div class="form-group">
+                <label for="quantity" data-translate="quantity">Quantity</label>
+                <input type="number" name="quantity" id="quantity" required>
+            </div>
+            <div class="form-group">
+                <label for="sizeRange" data-translate="sizeRange">Size Range</label>
+                <input type="text" name="sizeRange" id="sizeRange" required>
+            </div>
+            <input type="submit" value="Submit" data-translate="submit">
+        </form>
+    </div>
+    
+    <script>
+        async function fetchTranslations(lang) {
+            const response = await fetch(`${lang}.json`);
+            const translations = await response.json();
+            return translations;
+        }
 
-        <div class="form-group">
-            <label for="imageBrand">Image Brand</label>
-            <input type="text" name="imageBrand" id="imageBrand" required>
-        </div>
+        function applyTranslations(translations) {
+            document.querySelectorAll('[data-translate]').forEach(elem => {
+                const key = elem.getAttribute('data-translate');
+                if (elem.tagName === 'INPUT' && elem.type === 'submit') {
+                    elem.value = translations[key];
+                } else {
+                    elem.innerText = translations[key];
+                }
+            });
+        }
 
-        <div class="form-group">
-            <label for="priceBottom">Price Bottom</label>
-            <input type="number" name="priceBottom" id="priceBottom" required>
-        </div>
+        document.getElementById('languageSelector').addEventListener('change', async function () {
+            const selectedLang = this.value;
+            const translations = await fetchTranslations(selectedLang);
+            applyTranslations(translations);
+        });
 
-        <div class="form-group">
-            <label for="priceTop">Price Top</label>
-            <input type="number" name="priceTop" id="priceTop" required>
-        </div>
+        document.getElementById('formSelector').addEventListener('change', function () {
+            const forms = document.querySelectorAll('.form-container form');
+            forms.forEach(form => form.style.display = 'none');
+            const selectedForm = this.value;
+            if (selectedForm) {
+                document.getElementById(selectedForm).style.display = 'block';
+            }
+        });
 
-        <div class="form-group">
-            <label for="quantity">Quantity</label>
-            <input type="number" name="quantity" id="quantity" required>
-        </div>
-
-        <div class="form-group">
-            <label for="sizeRange">Size Range</label>
-            <input type="text" name="sizeRange" id="sizeRange" required>
-        </div>
-
-        <input type="submit" value="Submit">
-    </form>
-
-    <form id="converseForm">
-        <h3>Converse</h3>
-        <div class="form-group">
-            <label for="title">Title</label>
-            <input type="text" name="title" id="title" required>
-        </div>
-
-        <div class="form-group">
-            <label for="brand">Brand</label>
-            <input type="text" name="brand" id="brand" required>
-        </div>
-
-        <div class="form-group">
-            <label for="image1">Image 1</label>
-            <input type="text" name="image1" id="image1" required>
-        </div>
-
-        <div class="form-group">
-            <label for="image2">Image 2</label>
-            <input type="text" name="image2" id="image2" required>
-        </div>
-
-        <div class="form-group">
-            <label for="image3">Image 3</label>
-            <input type="text" name="image3" id="image3" required>
-        </div>
-
-        <div class="form-group">
-            <label for="imageBrand">Image Brand</label>
-            <input type="text" name="imageBrand" id="imageBrand" required>
-        </div>
-
-        <div class="form-group">
-            <label for="priceBottom">Price Bottom</label>
-            <input type="number" name="priceBottom" id="priceBottom" required>
-        </div>
-
-        <div class="form-group">
-            <label for="priceTop">Price Top</label>
-            <input type="number" name="priceTop" id="priceTop" required>
-        </div>
-
-        <div class="form-group">
-            <label for="quantity">Quantity</label>
-            <input type="number" name="quantity" id="quantity" required>
-        </div>
-
-        <div class="form-group">
-            <label for="sizeRange">Size Range</label>
-            <input type="text" name="sizeRange" id="sizeRange" required>
-        </div>
-
-        <input type="submit" value="Submit">
-    </form>
-
-    <form id="airForceForm">
-        <h3>Air Force</h3>
-        <div class="form-group">
-            <label for="title">Title</label>
-            <input type="text" name="title" id="title" required>
-        </div>
-
-        <div class="form-group">
-            <label for="brand">Brand</label>
-            <input type="text" name="brand" id="brand" required>
-        </div>
-
-        <div class="form-group">
-            <label for="image1">Image 1</label>
-            <input type="text" name="image1" id="image1" required>
-        </div>
-
-        <div class="form-group">
-            <label for="image2">Image 2</label>
-            <input type="text" name="image2" id="image2" required>
-        </div>
-
-        <div class="form-group">
-            <label for="image3">Image 3</label>
-            <input type="text" name="image3" id="image3" required>
-        </div>
-
-        <div class="form-group">
-            <label for="imageBrand">Image Brand</label>
-            <input type="text" name="imageBrand" id="imageBrand" required>
-        </div>
-
-        <div class="form-group">
-            <label for="priceBottom">Price Bottom</label>
-            <input type="number" name="priceBottom" id="priceBottom" required>
-        </div>
-
-        <div class="form-group">
-            <label for="priceTop">Price Top</label>
-            <input type="number" name="priceTop" id="priceTop" required>
-        </div>
-
-        <div class="form-group">
-            <label for="quantity">Quantity</label>
-            <input type="number" name="quantity" id="quantity" required>
-        </div>
-
-        <div class="form-group">
-            <label for="sizeRange">Size Range</label>
-            <input type="text" name="sizeRange" id="sizeRange" required>
-        </div>
-
-        <input type="submit" value="Submit">
-    </form>
+        // Set default language on page load
+        (async function () {
+            const translations = await fetchTranslations('en');
+            applyTranslations(translations);
+        })();
+    </script>
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
