@@ -25,8 +25,8 @@ function createCard(docId, data) {
             <div class="card-title">${docId}</div><hr>
             <div class="card-brand">Brand: ${data.Brand}</div>
             <div class="card-size">Size Range: ${data.SizeRange}</div>
-            <div class="card-price">Price Range: KES ${data.PriceBottom.toLocaleString()} - ${data.PriceTop.toLocaleString()}</div>
             <div class="card-qty">Quantity: ${data.Quantity}</div>
+            <div class="card-price">KES ${data.PriceBottom.toLocaleString()} - ${data.PriceTop.toLocaleString()}</div>
         </div>
     `;
 }

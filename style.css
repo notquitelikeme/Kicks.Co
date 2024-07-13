@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* Ensures padding and border are included in the element's total width and height */
     font-family: "Raleway", sans-serif;
     text-transform: capitalize;
     text-decoration: none;
@@ -158,6 +157,75 @@ header .navbar ul li:hover>a {
     color: #fff;
 }
 
+.img-body {
+    background-image: linear-gradient(60deg, rgba(0, 100, 0, 0.5), rgba(0, 0, 96, 0.5)), url(Images/homebg1.jpg);
+    min-height: 95vh;
+    width: 100%;
+    background-position: center;
+    position: relative;
+    color: white;
+    text-align: center;
+    align-content: center;
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+    transition: background 1s, color 1s;
+    background: rgba(0, 100, 0, 0.5);
+    color: white;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slideInReverse {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutReverse {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
 footer {
     background: linear-gradient(60deg, darkgreen, rgb(0, 0, 68));
     color: white;
@@ -283,17 +351,11 @@ footer hr {
     text-align: center;
     background: linear-gradient(60deg, darkgreen, rgb(0, 0, 96));
     -webkit-background-clip: text;
-    /* For Safari and Chrome */
     -moz-background-clip: text;
-    /* For Firefox */
     background-clip: text;
-    /* Standard property */
     -webkit-text-fill-color: transparent;
-    /* For Safari and Chrome */
     -moz-text-fill-color: transparent;
-    /* For Firefox */
     text-emphasis-color: transparent;
-    /* Standard property */
 }
 
 .catalogue-title {
@@ -301,6 +363,7 @@ footer hr {
     margin: 10px;
     padding: 20px;
 }
+
 .container {
     display: flex;
     justify-content: left;
@@ -330,7 +393,7 @@ footer hr {
     transform: translateY(-10px);
 }
 
-.product-img {
+.product-image {
     height: 180px;
     width: 180px;
     object-fit: cover;
@@ -354,10 +417,14 @@ footer hr {
 
 .card-brand,
 .card-size,
-.card-price,
 .card-qty {
     font-size: 10px;
     color: #555;
+}
+
+.card-price {
+    font-size: 15px;
+    color: black;
 }
 
 .card-brand {
@@ -371,4 +438,14 @@ footer hr {
     left: 0;
     width: 50px;
     height: 50px;
+}
+.loc-map {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid black;
+    width: 1000px;
+    height: 350px;
+    overflow: hidden;
 }
